@@ -1,0 +1,34 @@
+{
+  "name": "preview-link-block",
+  "version": "1.0.0",
+  "description": "Custom Gutenberg block for links with hoverable preview text and optional images",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "wp-scripts start",
+    "build": "wp-scripts build",
+    "lint:js": "wp-scripts lint-js",
+    "lint:css": "wp-scripts lint-style",
+    "format": "wp-scripts format"
+  },
+  "keywords": [
+    "wordpress",
+    "gutenberg",
+    "block",
+    "link",
+    "preview",
+    "tooltip"
+  ],
+  "author": "Eric Burns",
+  "license": "MIT",
+  "devDependencies": {
+    "@wordpress/block-editor": "^13.0.0",
+    "@wordpress/blocks": "^12.0.0",
+    "@wordpress/components": "^28.0.0",
+    "@wordpress/i18n": "^4.0.0",
+    "@wordpress/scripts": "^28.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
