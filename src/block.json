@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "preview-link-block/preview-link",
+  "title": "Preview Link",
+  "category": "text",
+  "icon": "link",
+  "description": "A link with a custom preview explanation and optional image that appears on hover",
+  "keywords": [ "link", "preview", "tooltip", "hover" ],
+  "textdomain": "preview-link-block",
+  "attributes": {
+    "linkText": {
+      "type": "string",
+      "default": "Click here"
+    },
+    "linkUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "previewText": {
+      "type": "string",
+      "default": "Enter preview explanation here"
+    },
+    "previewImageId": {
+      "type": "number",
+      "default": 0
+    },
+    "previewImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "previewImageAlt": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}
