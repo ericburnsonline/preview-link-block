@@ -1,0 +1,73 @@
+/**
+ * Preview Link Block - Frontend Styles
+ * Styles for the tooltip that appears on hover
+ */
+
+.preview-link {
+	text-decoration: underline;
+	cursor: pointer;
+	position: relative;
+}
+
+.preview-link-tooltip {
+	position: fixed;
+	z-index: 10000;
+	background: #1f1f1f;
+	color: #ffffff;
+	border-radius: 8px;
+	padding: 12px;
+	max-width: 280px;
+	box-shadow: 0 10px 40px rgba( 0, 0, 0, 0.3 );
+	font-size: 14px;
+	line-height: 1.5;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+	pointer-events: none;
+}
+
+.preview-link-tooltip.visible {
+	opacity: 1;
+}
+
+.preview-link-tooltip-image {
+	width: 100%;
+	height: auto;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	display: block;
+	max-height: 180px;
+	object-fit: cover;
+}
+
+.preview-link-tooltip-text {
+	font-size: 13px;
+	line-height: 1.6;
+	word-wrap: break-word;
+}
+
+/* Dark mode support */
+@media ( prefers-color-scheme: dark ) {
+	.preview-link-tooltip {
+		background: #2a2a2a;
+		color: #e0e0e0;
+		box-shadow: 0 10px 40px rgba( 0, 0, 0, 0.5 );
+	}
+}
+
+/* Light mode */
+@media ( prefers-color-scheme: light ) {
+	.preview-link-tooltip {
+		background: #ffffff;
+		color: #1f1f1f;
+		border: 1px solid #e0e0e0;
+		box-shadow: 0 4px 12px rgba( 0, 0, 0, 0.15 );
+	}
+}
+
+/* Mobile: make tooltips easier to tap */
+@media ( max-width: 768px ) {
+	.preview-link-tooltip {
+		max-width: 90vw;
+		font-size: 13px;
+	}
+}
